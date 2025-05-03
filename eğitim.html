@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitim Geçmişi - Melih Eray İGREK</title>
+    <style>
+        /* Genel sıfırlamalar ve temel ayarlar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('resimler/arkaplan4.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #005599;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #003366;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-decoration: underline;
+            color: #003366;
+        }
+
+        .education-list {
+            margin-top: 15px;
+            list-style-type: none;
+        }
+
+        .education-list li {
+            font-size: 1.1em;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .education-list li::before {
+            content: "📘";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Melih Eray İGREK - Eğitim Geçmişi</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="anasayfa.html">Ana Sayfa</a></li>
+            <li><a href="eğitim.html">Eğitim Geçmişi</a></li>
+            <li><a href="hakkımızda.html">Mirasımız</a></li>
+            <li><a href="iletisim.html">İlgi Alanlarım</a></li>
+            <li><a href="memleketim.html">Şehrimiz</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Merhaba, Ben Melih Eray İGREK</h2>
+            <p>
+                Eğitim serüvenim, doğup büyüdüğüm Erzurum’un Şenkaya ilçesine bağlı İğdeli Mahallesi İlköğretim Okulu’nda başladı.
+                Temel eğitimimin ilk adımlarını attığım bu okul, bana yalnızca akademik bilgiler değil; aynı zamanda sorumluluk bilinci,
+                arkadaşlık ve paylaşım gibi değerleri de kazandırdı.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Ortaokul Yıllarım</h2>
+            <p>
+                Ortaokul eğitimime Şenkaya Yatılı Bölge Ortaokulu’nda devam ettim. Yatılı okulun getirdiği disiplin ve düzenli yaşam tarzı sayesinde
+                hem akademik hem de kişisel anlamda önemli gelişmeler kaydettim. Bu dönemde yaşadığım deneyimler, beni hayata daha sağlam basan
+                bir birey haline getirdi.
+            </p>
+            <p>
+                Ortaokul yıllarımda 7. sınıfta TÜBİTAK Bilim Fuarı’na katıldım. Matematik öğretmenimin yönlendirmesiyle, tamamen bana ait olan bir matematik oyununu tasarlayarak fuarda sunma fırsatı yakaladım.
+                Bu deneyim, hem bilimsel düşünceye olan ilgimi pekiştirdi hem de özgüvenimi artırdı.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Lise Yıllarım</h2>
+            <p>
+                Lise yıllarımı her insanın olduğu gibi ben de çok özel hatırlıyorum. Gençliğimin en parlak yıllarını, arkadaşlarım, öğretmenlerim
+                ve okul etkinlikleriyle dolu dolu geçirdim. Özellikle liseye geçtiğimde yaşadığım ilk özgürlük duygusu, beni hayata daha açık ve
+                özgüvenli bir şekilde hazırladı. Yıllar içinde edindiğim dostluklar, sadece arkadaşlıklar değil, aynı zamanda hayatın gerçek
+                anlamına dair öğrendiğim en değerli derslerden oldu.
+            </p>
+            <p>
+                Lise eğitimime Erzincan Refahiye Fen Lisesi’nde başladım. 9. sınıfın ilk dönemini burada tamamladıktan sonra, ara tatilde nakil alarak Artvin Arhavi Fen Lisesi’ne geçiş yaptım.
+                Bu değişiklik, farklı şehir ve kültürleri tanımamı sağladı ve yeni arkadaşlıklar edinmemin önünü açtı. Bu yıllar, sadece akademik anlamda değil, aynı zamanda kişisel gelişimime de katkı sağladı.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Üniversite Yıllarım</h2>
+            <p>
+                Şu anda Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde 1. sınıf öğrencisiyim. Üniversite hayatımda yazılım ve web teknolojilerine olan ilgimi daha da ileri taşıyarak kendimi bu alanda geliştirmeye odaklandım.
+                Hedefim, öğrendiğim bilgilerle geleceğe yön veren projelerde yer almak ve kendime sağlam bir kariyer inşa etmek.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Melih Eray İGREK</p>
+    </footer>
+
+</body>
+
+</html>
