@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('../resimler/anasayfa.webp'); 
+    background-image: url('../resimler/arkaplan5.webp'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -115,6 +115,46 @@ footer {
     width: 100%;
     font-size: 1em;
 }
+/* Slider içerisindeki başlık stilini iyileştirelim */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px; /* Başlığı resmin alt kısmına koyuyoruz */
+    left: 50%; /* Ortalamak için */
+    transform: translateX(-50%); /* Tam ortalama */
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Başlıkların daha net görünmesi için gölge ekleyelim */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Hover efektine geçiş ekleyelim */
+}
+
+/* Hover efekti: Başlık rengi değişecek */
+.carousel-caption:hover {
+    color: #ffcc00; /* Başlık sarı renkte olacak */
+    transform: translateX(-50%) scale(1.1); /* Başlık büyüyecek */
+}
+
+/* Resimlere oturan başlıklar için */
+.slider-gorsel {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Resimleri düzgün şekilde kesiyoruz */
+    border-radius: 5px;
+}
+
+/* Resmin boyutunu sabitlemek için */
+.slider-gorsel {
+    width: 100%;               /* Resmi tüm genişlikte yap */
+    height: 400px;             /* Sabit yükseklik - istediğiniz yükseklik burada */
+    object-fit: cover;         /* Resmi kırpacak şekilde sığdır */
+    object-position: center;   /* Resmi kutuya ortala */
+}
+
+
+
 
 
 @media screen and (max-width: 768px) {
