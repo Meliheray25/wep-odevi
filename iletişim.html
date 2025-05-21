@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Şehrimiz - Melih Eray İGREK</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="cssanasayfa/style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>İletişim - Melih Eray İGREK</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="anasayfa.html">Ana Sayfa</a></li>
+      <li><a href="eğitim.html">Eğitim Geçmişi</a></li>
+      <li><a href="ilgialanlarım.html">İlgi Alanlarım</a></li>
+      <li><a href="şehrimiz.html">Şehrimiz</a></li>
+      <li><a href="takım.html">Takımımız</a></li>
+      <li><a href="iletişim.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="app">
+      <form>
+        <table>
+          <tr>
+            <td>Adınız:</td>
+            <td><input type="text" id="ad" /></td>
+          </tr>
+          <tr>
+            <td>Soyadınız:</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>Telefon:</td>
+            <td><input type="tel" id="telefon" placeholder="05xx xxx xx xx" /></td>
+          </tr>
+
+          <tr>
+            <td>Email Adresiniz:</td>
+            <td><input type="email" id="email" /></td>
+          </tr>
+          <tr>
+            <td>Cinsiyet:</td>
+            <td>
+              <label><input type="radio" name="cinsiyet" value="Erkek" /> Erkek</label>
+              <label><input type="radio" name="cinsiyet" value="Kadın" /> Kadın</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Doğum Tarihi:</td>
+            <td><input type="date" /></td>
+          </tr>
+          <tr>
+            <td>Şehriniz:</td>
+            <td>
+              <select>
+                <option value="">Seçiniz</option>
+                <option value="Erzurum">Erzurum</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Eskişehir">Eskişehir</option>
+                <option value="Sakarya">Sakarya</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Meslek:</td>
+            <td>
+              <input list="meslekler" name="meslek" />
+              <datalist id="meslekler">
+                <option value="Öğrenci"></option>
+                <option value="Mühendis"></option>
+                <option value="Doktor"></option>
+                <option value="Öğretmen"></option>
+              </datalist>
+            </td>
+          </tr>
+
+          <tr>
+            <th colspan="2">Hobiler</th>
+          </tr>
+          <tr>
+            <td>Kitap Okumak</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td>Spor Yapmak</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td>Yürüyüş Yapmak</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td>Enstrüman Çalmak</td>
+            <td><input type="checkbox" /></td>
+          </tr>
+
+          <tr>
+            <td>Favori Renk:</td>
+            <td><input type="color" /></td>
+          </tr>
+
+          <tr>
+            <td colspan="2"><textarea cols="40" rows="10" placeholder="Mesajınız"></textarea></td>
+          </tr>
+
+          <tr>
+            <td>Bize Göndermek İstediğiniz Dosya:</td>
+            <td><input type="file" /></td>
+          </tr>
+
+          <tr>
+            <td>Memnuniyet Düzeyi:</td>
+            <td><input type="range" min="0" max="10" /></td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Gönder" style="margin-right:610px" />
+              <input type="reset" value="Temizle" />
+            </td>
+          </tr>
+        </table>
+      </form>
+
+<div style="margin-top: 15px; text-align: center;">
+    <button type="button" onclick="javascriptKontrol()">JS ile Kontrol Et</button>
+    <button type="button" @click="vueKontrol()">Vue.js ile Kontrol Et</button>
+</div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Melih Eray İGREK</p>
+  </footer>
+
+  <script src="bootstrap/bootstrap.min.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+  <script>
+     function javascriptKontrol() {
+      const ad = document.getElementById("ad").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const telefon = document.getElementById("telefon").value.trim();
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const telefonRegex = /^[0-9]+$/;
+
+      if (!ad || !email || !telefon) {
+        alert("JS: Tüm alanları doldurun.");
+        return;
+      }
+      if (!emailRegex.test(email)) {
+        alert("JS: Geçerli bir e-posta girin.");
+        return;
+      }
+      if (!telefonRegex.test(telefon)) {
+        alert("JS: Telefon sadece rakam içermeli.");
+        return;
+      }
+
+      alert("JS ile form kontrolü başarılı.");
+    }
+
+
+    
+    new Vue({
+      el: "#app",
+      methods: {
+        vueKontrol() {
+          const ad = document.getElementById("ad").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const telefon = document.getElementById("telefon").value.trim();
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const telefonRegex = /^[0-9]+$/;
+
+          if (!ad || !email || !telefon) {
+            alert("Vue: Tüm alanları doldurun.");
+            return;
+          }
+          if (!emailRegex.test(email)) {
+            alert("Vue: Geçerli bir e-posta girin.");
+            return;
+          }
+          if (!telefonRegex.test(telefon)) {
+            alert("Vue: Telefon sadece rakam içermeli.");
+            return;
+          }
+
+          alert("Vue.js ile form kontrolü başarılı.");
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
