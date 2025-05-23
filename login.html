@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Sayfası</title>
+</head>
+<body>
+    <h2>Giriş Yap</h2>
+    <form action="kontrol.php" method="post" onsubmit="return validateForm()">
+        <label for="email">Kullanıcı Adı (E-posta):</label><br>
+        <input type="text" id="email" name="email" /><br><br>
+
+        <label for="password">Şifre:</label><br>
+        <input type="password" id="password" name="password" /><br><br>
+
+        <input type="submit" value="Giriş Yap" />
+    </form>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if(email === '' || password === '') {
+                alert("Lütfen tüm alanları doldurun.");
+                return false;
+            }
+
+            // Basit e-posta kontrolü (daha iyi regex kullanabilirsiniz)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email)) {
+                alert("Lütfen geçerli bir e-posta adresi girin.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
